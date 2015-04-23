@@ -33,6 +33,8 @@ int main( void )
     int i, iThreadCount;
     iThreadCount=4;
     pthread_t threads[iThreadCount]; /* 쓰레드 아이디를 위한 변수 */
+
+    func1();
     
     for ( i=0; i<iThreadCount; i++ )  /* 쓰레드 생성 */
         // TODO: 스레드 생성하기
