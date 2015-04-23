@@ -24,7 +24,7 @@ void* Thread( void *arg )
 //-------------------------------------------------------------
 int main( void )
 {
-    int i, clock_get, iThreadCount;
+    int i, iThreadCount;
     iThreadCount=4;
     pthread_t threads[iThreadCount]; /* 쓰레드 아이디를 위한 변수 */
     
