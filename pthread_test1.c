@@ -7,6 +7,7 @@
  ***************************************/
 #include <stdio.h>
 #include <pthread.h>
+#include <unistd.h>
 
 int thread_args[4] = { 0, 1, 2, 3 };  /* 쓰레드가 사용할 인자 */
 //-------------------------------------------------------------
@@ -14,8 +15,10 @@ int thread_args[4] = { 0, 1, 2, 3 };  /* 쓰레드가 사용할 인자 */
 void* Thread( void *arg )
 {
     int i;
-    for ( i=0; i<30; i++ )
+    for ( i=0; i<30; i++ ) {
         printf( "thread %d: %dth iteration\n", *(int*)arg, i );
+	usleep(1000);
+    }
     pthread_exit(0);  /* 쓰레드 종료 함수 */
 }
 //-------------------------------------------------------------
