@@ -21,6 +21,12 @@ void* Thread( void *arg )
     }
     pthread_exit(0);  /* 쓰레드 종료 함수 */
 }
+
+int func1(void) {
+	printf("func1 is called.");
+	return 1;
+}
+
 //-------------------------------------------------------------
 int main( void )
 {
