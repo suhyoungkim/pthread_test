@@ -24,6 +24,7 @@ void* Thread( void *arg )
 
 int func1(void) {
 	printf("func1 is called.");
+	return 1;
 }
 
 //-------------------------------------------------------------
